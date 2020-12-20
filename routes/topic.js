@@ -75,9 +75,7 @@ router.delete('/:id', async (req, res) => {
         const topicDelete = await Topic.deleteOne({
             _id: req.params.id
         })
-        res.json({
-            success: true
-        });
+        res.send("Data has been deleted");
     } catch (err) {
         res.json({
             message: err
