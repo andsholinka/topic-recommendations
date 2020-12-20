@@ -61,9 +61,7 @@ router.put('/:id', async (req, res) => {
         }, {
             isVerified: true
         })
-        res.json({
-            success: true
-        });
+        res.send("isVerified: true");
     } catch (err) {
         res.json({
             message: err
